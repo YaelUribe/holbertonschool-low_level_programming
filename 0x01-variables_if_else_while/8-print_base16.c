@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
  * main - Entry point
@@ -7,13 +9,13 @@
 int main(void)
 {
 	int n;
+	char alphabet;
 
-	char alpha;
 	for (n = 48; n < 58; n++)
 		putchar(n);
-	for (alpha = 'a'; alpha <= 'f'; alpha++)
+	for (alphabet = 'a'; alphabet <= 'f'; alphabet++)
 	{
-		putchar(alpha);
+		putchar(alphabet);
 	}
 	putchar('\n');
 	return (0);
