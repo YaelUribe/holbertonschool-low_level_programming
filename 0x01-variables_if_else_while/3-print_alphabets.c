@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -12,9 +12,9 @@ int main(void)
 	{
 		putchar(alpha2);
 	}
-	for (alpha2 = 'A'; alpha2 <= 'Z'; alpha2++)
+	for (alpha2 = 'A'; alpha2 <= 'Z'; alpha2t++)
 	{
-		putchar(alpha2)
+		putchar(alpha2);
 	}
 	putchar('\n');
 	return (0);
