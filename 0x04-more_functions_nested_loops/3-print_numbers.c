@@ -3,8 +3,6 @@
 /**
  *print_numbers - printing numbers from 0 to 9
  *
- *@c: number to evaluate
- *
  *Return: always (0)
  */
 void print_numbers(void)
