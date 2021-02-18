@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *print_square - Prints the size of a square
+ *swap_int - swaps numbers
  *@a: 98
  *@b: 42
  *Return: void
