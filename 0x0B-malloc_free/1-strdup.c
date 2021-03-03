@@ -33,5 +33,7 @@ char *_strdup(char *str)
 		dpl++;
 		str++;
 	}
+	dpl = NULL;
 	return (p);
+	
 }
