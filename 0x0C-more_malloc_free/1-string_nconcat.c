@@ -27,14 +27,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len, len2, g, h;
 	char *z;
 
-	if (s1 == NULL || *s1 == '\0')
-		len = 0;
-	else
-		(len = strl(s1));
-	if (s2 == NULL || *s2 == '\0')
-		len2 = 0;
-	else
-		(len2 = strl(s2));
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	len = strl(s1);
+	len2 = strl(s2);
 	if (n >= len2)
 		n = len2;
 	z = malloc(sizeof(char) * (n + len + 1));
