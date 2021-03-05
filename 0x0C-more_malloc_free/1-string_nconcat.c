@@ -1,7 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
  *strl - length of a string
  *@y: variable
@@ -17,11 +15,6 @@ int strl(char *y)
 	}
 	return (k);
 }
-
-
-#include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
  *string_nconcat - Concatenates two strings
  *@s1: 1st string
@@ -31,18 +24,17 @@ int strl(char *y)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len, g, h;
+	unsigned int len, len2, g, h;
 	char *z;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 	len = strl(s1);
+	len2 = strl(s2);
+	if (n >= len2)
+		n = len2;
 	z = malloc(sizeof(char) * (n + len + 1));
 	if (z == NULL)
 	{
@@ -62,5 +54,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	z[g + h] = '\0';
 	return (z);
 }
-
-
