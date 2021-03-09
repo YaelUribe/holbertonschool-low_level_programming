@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
  *free_dog - To free dogs
@@ -7,9 +7,12 @@
  */
 void free_dog(dog_t *d)
 {
-	if (d == NULL)
-		return;
-	free(d->name);
-	free(d->owner);
+	if (d != NULL)
+	{
+		if (name != NULL)
+		free(d->name);
+		if (owner != NULL)
+		free(d->owner);
+	}
 	free(d);
 }
