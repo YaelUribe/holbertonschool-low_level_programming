@@ -9,11 +9,18 @@
  */
 void print_array(int *a, int n)
 {
-	int s;
+	int d;
 
-	for (s = 0; a[s] != '\0'; s++)
+	for (d = 0; d < n; d++)
 	{
-		a[n] = a[s];
-		printf("%d, ", a[n]);
+		if (d < n - 1)
+		{
+			printf("%d, ", a[d]);
+		}
+		else
+		{
+			printf("%d", a[d]);
+		}
 	}
+	printf("\n");
 }
