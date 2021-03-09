@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * *_strncat - This function concatenate two strings
+ * *_strncat - This function concatenates two strings
  * @dest: first string to concatenate
  * @src: second string to concatenate
  * @n: integer limit
@@ -14,9 +14,7 @@ char *_strncat(char *dest, char *src, int n)
 	while (dest[d] != '\0')
 	{
 		d++;
-		
 	}
-
 	for (q = 0; q < n; q++, d++)
 	{
 		if (src[q] == '\0')
