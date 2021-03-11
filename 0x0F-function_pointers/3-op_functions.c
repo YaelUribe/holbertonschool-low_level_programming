@@ -48,6 +48,11 @@ int op_div(int a, int b)
 {
 	int divis;
 
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	divis = (a / b);
 	return (divis);
 }
@@ -61,6 +66,11 @@ int op_mod(int a, int b)
 {
 	int porc;
 
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	porc = (a % b);
 	return (porc);
 }
