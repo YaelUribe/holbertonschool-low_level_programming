@@ -3,7 +3,7 @@
  *print_list - function to print all elements of list_t
  *@h: pointer to data
  *
- *return : the size of the list, number of nodes
+ *Return: the size of the list, number of nodes
  */
 size_t print_list(const list_t *h)
 {
