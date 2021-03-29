@@ -10,7 +10,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;/*creating the file*/
 	char *bffr; /*to separate the memory of letters*/
 	int length;/*to use read with bffr and letters*/
-	int check;
 
 	if (!filename)
 		return (0);
@@ -25,10 +24,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	length = read(fd, bffr, letters); /*file, bffer, letters*/
 	if (length == -1)
 		return (0);
-	check = write(STDOUT_FILENO, bffr, length);
-	if (check == -1)
+	if (write(STDOUT_FILENO, bffr, length) != length)
 		return (0);
 	close(fd);
 	free(bffr);
-	return (check);
+	return (length);
 }
