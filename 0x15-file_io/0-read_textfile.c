@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;/*creating the file*/
-	int *bffr; /*to separate the memory of letters*/
+	char *bffr; /*to separate the memory of letters*/
 	int length;/*to use read with bffr and letters*/
 
 	if (!filename)
