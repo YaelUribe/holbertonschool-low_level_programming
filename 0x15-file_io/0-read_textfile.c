@@ -23,8 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	length = read(fd, bffr, letters); /*file, bffer, letters*/
 	if (length == -1)
+		free(bffr);
 		return (0);
 	if (write(STDOUT_FILENO, bffr, length) != length)
+		free(bffr);
 		return (0);
 	close(fd);
 	free(bffr);
