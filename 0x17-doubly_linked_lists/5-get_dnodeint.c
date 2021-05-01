@@ -20,5 +20,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		copy = copy->next;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
