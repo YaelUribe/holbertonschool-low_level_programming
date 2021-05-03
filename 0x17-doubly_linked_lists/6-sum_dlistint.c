@@ -6,16 +6,14 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	dlistint_t *copy = NULL;
 	int i = 0;
 
-	copy = head;
-	if (copy == NULL)
+	if (head == NULL)
 		return (0);
-	while (copy->next != NULL)
+	while (head->next != NULL)
 	{
-		i += copy->n;
-		copy = copy->next;
+		i += head->n;
+		head = head->next;
 	}
 	return (i);
 }
