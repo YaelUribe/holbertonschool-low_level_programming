@@ -12,6 +12,7 @@ int sum_dlistint(dlistint_t *head)
 	copy = head;
 	if (head == NULL)
 		return (0);
+	i = copy->n;
 	while (copy->next != NULL)
 	{
 		copy = copy->next;
