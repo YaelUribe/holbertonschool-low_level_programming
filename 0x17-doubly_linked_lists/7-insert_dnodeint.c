@@ -26,7 +26,7 @@ size_t dlistint_len(const dlistint_t *h)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *copy = NULL, *nu_node = NULL;
-	unsigned int i, length = 0;
+	unsigned int i = 0, length = 0;
 
 	copy = *h;
 	length = dlistint_len(copy);
@@ -34,20 +34,22 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!nu_node)
 		return (NULL);
 	if (idx == 0)
-		return (add_dnodeint(h, n));
+		return (add_dnodeint(&h, n));
 	if (idx == length)
 		return (add_dnodeint_end(h, n));
-	while (i == idx - 1)
+	while (copy->next != NULL)
 	{
+		if (i == idx - 1)
+		{
+			nu_node->prev = copy;
+			nu_node->next = copy->next;
+			nu_node->n = n;
+			copy->next = nu_node;
+			copy = copy->next->next;
+			copy->prev = nu_node;
+		}
 		copy = copy->next;
-		if (!copy)
-			return (NULL);
 		i++;
 	}
-	nu_node->n = n;
-	nu_node->next = copy->next;
-	copy->next->prev = nu_node;
-	copy->next = nu_node;
-	nu_node->prev = copy;
 	return (nu_node);
 }
