@@ -6,13 +6,16 @@
 */
 size_t dlistint_len(const dlistint_t *h)
 {
-	ssize_t i;
-	const dlistint_t *copy = NULL;
+	size_t count = 0;
+	const dlistint_t *copy;
 
+	if (h == NULL)
+		return (count);
 	copy = h;
-	for (i = 0; copy != NULL; i++)
+	while (copy)
 	{
+		count++;
 		copy = copy->next;
 	}
-	return (i);
+	return (count);
 }
