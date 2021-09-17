@@ -2,17 +2,18 @@
 /**
 * dlistint_len - function to determine ammount of elements in a list
 * @h: Pointer to the first element of the list
-* Return: The number of elements ot he list
+* Return: The number of elements in the list
 */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t i;
+	size_t i = 0;
 	const dlistint_t *copy = NULL;
 
 	copy = h;
-	for (i = 0; copy != NULL; i++)
+	while (copy)
 	{
 		copy = copy->next;
+		i++;
 	}
 	return (i);
 }
