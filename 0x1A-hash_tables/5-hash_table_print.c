@@ -18,12 +18,14 @@ void hash_table_print(const hash_table_t *ht)
 		copier = ht->array[i];
 		if (copier == NULL)
 			continue;
-		else if (copier)
+		else
+		{
 			if (k > 0)
 				printf(", ");
 			printf("'%s': '%s'", copier->key, copier->value);
 			copier = copier->next;
 			k++;
+		}
 	}
 	printf("}\n");
 }
