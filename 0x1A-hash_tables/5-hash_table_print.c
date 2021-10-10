@@ -16,9 +16,7 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		copier = ht->array[i];
-		if (copier == NULL)
-			continue;
-		else
+		while (copier)
 		{
 			if (k > 0)
 				printf(", ");
