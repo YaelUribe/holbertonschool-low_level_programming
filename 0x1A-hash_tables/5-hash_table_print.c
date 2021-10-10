@@ -19,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 		if (copier == NULL)
 			continue;
 		else if (copier)
-			if(k > 0)
+			if (k > 0)
 				printf(", ");
 			printf("'%s': '%s'", copier->key, copier->value);
 			copier = copier->next;
