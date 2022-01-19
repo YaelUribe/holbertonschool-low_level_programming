@@ -23,13 +23,13 @@ int binary_search(int *array, size_t size, int value)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[i]);
 
-		middle = left + (right - left / 2);
-		if (array[middle] == value)
-			return (middle);
+		middle = (left + right)/ 2;
+		if (array[middle] < value)
+			left = middle + 1;
 		if (array[middle] > value)
 			right = middle - 1;
 		else
-			left = i + 1;
+			return (middle);
 	}
 	return (-1);
 }
